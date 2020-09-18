@@ -1,0 +1,28 @@
+﻿<Window x:Class="FeyeUav.Iaas.SocketPrototype.Client.SettingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FeyeUav.Iaas.SocketPrototype.Client"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize"
+        Title="操作者身份设定" Height="180" Width="320">
+    <Window.CommandBindings>
+        <CommandBinding Command="Close" CanExecute="ValidConfirm" Executed="Confirm"></CommandBinding>
+    </Window.CommandBindings>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="24"></RowDefinition>
+            <RowDefinition Height="24"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="32"></RowDefinition>
+        </Grid.RowDefinitions>
+        <RadioButton x:Name="rbtSend"  VerticalAlignment="Center" HorizontalAlignment="Left">发送方</RadioButton>
+        <RadioButton x:Name="rbtRecieve" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left">接收方</RadioButton>
+        <Button Grid.Row="4" Grid.Column="1" Width="120" Height="28" VerticalAlignment="Center" HorizontalAlignment="Right" Command="Close">
+            <Run>确定</Run>
+        </Button>
+    </Grid>
+</Window>
